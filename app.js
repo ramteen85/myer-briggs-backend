@@ -3,10 +3,12 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const userRoutes = require('./routes/user');
+const helmet = require('helmet');
 
 // server init
 const app = express();
 dotenv.config();
+app.use(helmet());
 
 // database
 const connectDB = async () => {
