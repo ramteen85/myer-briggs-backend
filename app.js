@@ -32,7 +32,7 @@ app.use(
   cors({
     credentials: true,
     allowedHeaders: '*',
-    origin: '*',
+    origin: 'http://localhost',
   }),
 );
 
